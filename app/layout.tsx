@@ -3,23 +3,26 @@ import { AppSidebar } from "@/components/appSide/page";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { ThemeProvider } from "./theme/themeProvider";
 
+import { Providers } from "./provider/storeProvider";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <SidebarProvider>
-            <AppSidebar />
-            <main>
-              <SidebarTrigger />
-              {children}
-            </main>
-          </SidebarProvider>
-        </ThemeProvider>
+        <Providers>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+            <SidebarProvider>
+              <AppSidebar />
+              <main>
+                <SidebarTrigger />
+                {children}
+              </main>
+            </SidebarProvider>
+          </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

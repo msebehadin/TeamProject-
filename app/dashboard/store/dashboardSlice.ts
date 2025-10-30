@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 
 interface DashboardStat {
   stats: { label: string; value: number }[];
@@ -9,13 +9,17 @@ const initialState: DashboardStat = {
     { label: "Active  Member", value: 6 },
     { label: "completed  projects", value: 6 },
   ],
+  
 };
 
 const dashboardSlice = createSlice({
     name:'dashboard',
     initialState,
     reducers:{
-
+  updateStats(state, action: PayloadAction<DashboardStat["stats"]>) {
+      state.stats = action.payload
+    },
     }
 })
+export  const {updateStats}= dashboardSlice.actions
 export default dashboardSlice.reducer
