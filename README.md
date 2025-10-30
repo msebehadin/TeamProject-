@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 Team Project Manager Dashboard
 
-## Getting Started
+A modern, responsive **project management dashboard** built with **Next.js 14**, **TypeScript**, **TailwindCSS**, and **shadcn/ui**.  
+It demonstrates clean architecture, SSR, data visualization, and modern state management using **Redux Toolkit**, **React Query**, and **Zustand**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
+🔗 [View on Vercel](https://your-vercel-demo-link.vercel.app)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Preview
+> A professional dashboard with charts, stats, projects list, and team roles.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Dashboard Preview](https://via.placeholder.com/1000x500?text=Team+Project+Manager+Dashboard)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🧠 Project Overview
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The **Team Project Manager Dashboard** is a mini admin system that helps visualize team activities and project progress.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Page | Description | Technologies |
+|------|--------------|---------------|
+| **Dashboard** | Displays summary stats and visual charts | Redux Toolkit + Recharts |
+| **Projects** | Shows project list in a table with SSR `[id]` details | React Query + Zustand |
+| **Team** | UI-only cards for different roles | shadcn/ui + Tailwind |
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ⚙️ Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Category | Tool |
+|-----------|------|
+| **Framework** | [Next.js 14 (App Router)](https://nextjs.org/) |
+| **Language** | TypeScript |
+| **Styling** | TailwindCSS + [shadcn/ui](https://ui.shadcn.com) |
+| **State Management** | Redux Toolkit, Zustand |
+| **Data Fetching** | React Query |
+| **Validation** | Zod |
+| **Charts** | Recharts |
+| **Dark Mode** | next-themes |
+| **Deployment** | Vercel |
+
+---
+
+## 🧩 Folder Structure
+
