@@ -1,4 +1,7 @@
 import "./globals.css";
+import { AppSidebar } from "@/components/appSide/page";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { ThemeProvider } from "./theme/themeProvider";
 
 export default function RootLayout({
   children,
@@ -7,7 +10,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SidebarProvider>
+            <AppSidebar />
+            <main>
+              <SidebarTrigger />
+              {children}
+            </main>
+          </SidebarProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
