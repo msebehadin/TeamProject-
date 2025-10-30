@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState, AppDispatch } from '@/lib/store'
+import Chart from '@/components/Chart/chart'
 import { updateStats } from './store/dashboardSlice'
 
 const DashboardPage = () => {
@@ -25,17 +26,22 @@ const DashboardPage = () => {
   return (
     <div className="p-8 space-y-6 w-full max-w-7xl mx-auto">
       <div className="flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Dashboard</h1>
-        <Button onClick={handleRefresh} className="bg-blue-600 hover:bg-blue-700">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Team Project</h1>
+        <Button 
+          onClick={handleRefresh} 
+          className="bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-700 dark:hover:bg-blue-800"
+        >
           Refresh Stats
         </Button>
       </div>
-
-      {/* Improved Grid Layout */}
+<div>
+  {/* Grid Layout with Dark Mode */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <Card className="w-full hover:shadow-lg transition-shadow duration-300">
+
+        {/* Total Projects Card */}
+        <Card className="w-full hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+            <CardTitle className="text-lg font-semibold text-gray-700 dark:text-gray-200">
               Total Projects
             </CardTitle>
           </CardHeader>
@@ -45,9 +51,10 @@ const DashboardPage = () => {
           </CardContent>
         </Card>
 
-        <Card className="w-full hover:shadow-lg transition-shadow duration-300">
+        {/* Active Members Card */}
+        <Card className="w-full hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+            <CardTitle className="text-lg font-semibold text-gray-700 dark:text-gray-200">
               Active Members
             </CardTitle>
           </CardHeader>
@@ -57,9 +64,10 @@ const DashboardPage = () => {
           </CardContent>
         </Card>
 
-        <Card className="w-full hover:shadow-lg transition-shadow duration-300">
+        {/* Completed Projects Card */}
+        <Card className="w-full hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg font-semibold text-gray-700 dark:text-gray-300">
+            <CardTitle className="text-lg font-semibold text-gray-700 dark:text-gray-200">
               Completed Projects
             </CardTitle>
           </CardHeader>
@@ -70,6 +78,9 @@ const DashboardPage = () => {
         </Card>
       </div>
     </div>
+    <Chart/>
+</div>
+    
   )
 }
 

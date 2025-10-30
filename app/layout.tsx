@@ -16,7 +16,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <SidebarProvider>
               <AppSidebar />
-              <main>
+              <main className="w-screen">
                 <SidebarTrigger />
                 {children}
               </main>
