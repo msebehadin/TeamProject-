@@ -26,7 +26,7 @@ const items = [
   },
   {
     title: "projects",
-    url: "/app/projects",
+    url: "/projects",
     icon: FolderArchive,
   },
   {

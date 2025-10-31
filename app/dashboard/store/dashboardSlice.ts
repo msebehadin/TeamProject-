@@ -1,13 +1,13 @@
 import { createSlice,PayloadAction } from "@reduxjs/toolkit";
 
 interface DashboardStat {
-  stats: { label: string; value: number }[];
+  stats: { title: string; value: number }[];
 }
 const initialState: DashboardStat = {
   stats: [
-    { label: "total projects", value: 2 },
-    { label: "Active  Member", value: 6 },
-    { label: "completed  projects", value: 6 },
+    { title: "total projects", value: 2 },
+    { title: "Active  Member", value: 6 },
+    { title: "completed  projects", value: 6 },
   ],
   
 };

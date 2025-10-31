@@ -2,7 +2,7 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
 import { useSelector, useDispatch } from 'react-redux'
-import { RootState, AppDispatch } from '@/lib/store'
+import { RootState, AppDispatch } from '@/app/lib/store'
 import Chart from '@/components/Chart/chart'
 import { updateStats } from './store/dashboardSlice'
 
@@ -12,16 +12,16 @@ const DashboardPage = () => {
 
   const handleRefresh = () => {
     const newStats = [
-      { label: "total projects", value: Math.floor(Math.random() * 100) },
-      { label: "Active Member", value: Math.floor(Math.random() * 50) },
-      { label: "completed projects", value: Math.floor(Math.random() * 80) },
+      { title: "total projects", value: Math.floor(Math.random() * 100) },
+      { title: "Active Member", value: Math.floor(Math.random() * 50) },
+      { title: "completed projects", value: Math.floor(Math.random() * 80) },
     ]
     dispatch(updateStats(newStats))
   }
 
-  const totalProjects = stats.find(s => s.label === "total projects")?.value ?? 0
-  const activeMembers = stats.find(s => s.label === "Active Member")?.value ?? 0
-  const completedProjects = stats.find(s => s.label === "completed projects")?.value ?? 0
+  const totalProjects = stats.find(s => s.title === "total projects")?.value ?? 0
+  const activeMembers = stats.find(s => s.title === "Active Member")?.value ?? 0
+  const completedProjects = stats.find(s => s.title === "completed projects")?.value ?? 0
 
   return (
     <div className="p-8 space-y-6 w-full max-w-7xl mx-auto">
