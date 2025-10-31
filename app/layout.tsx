@@ -1,9 +1,10 @@
 import "./globals.css";
 import { AppSidebar } from "@/components/appSide/page";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+
 import { ThemeProvider } from "./theme/themeProvider";
 
-import { Providers } from "./provider/storeProvider";
+import GeneralProvider from "./provider/generalProvider";
+import { SidebarTrigger } from "@/components/ui/sidebar";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -12,17 +13,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Providers>
+        <GeneralProvider>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            <SidebarProvider>
-              <AppSidebar />
-              <main className="w-screen">
-                <SidebarTrigger />
-                {children}
-              </main>
-            </SidebarProvider>
+            <AppSidebar />
+            <main className="w-screen">
+              <SidebarTrigger />
+              {children}
+            </main>
           </ThemeProvider>
-        </Providers>
+        </GeneralProvider>
       </body>
     </html>
   );

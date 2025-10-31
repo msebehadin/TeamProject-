@@ -1,0 +1,64 @@
+[
+
+  {
+    "id": "p1",
+    "name": "Next.js Migration",
+    "description": "Migrating the company website from React CRA to Next.js for SSR and performance improvements.",
+    "status": "In Progress",
+    "progress": 68,
+    "deadline": "2025-12-15",
+    "team": ["Alice", "John", "Sofia"],
+    "priority": "High"
+  },
+  {
+    "id": "p2",
+    "name": "Mobile App Redesign",
+    "description": "Redesigning the UX of the mobile app with a modern look and improved accessibility.",
+    "status": "Pending",
+    "progress": 0,
+    "deadline": "2025-11-10",
+    "team": ["Fatima", "Yonas"],
+    "priority": "Medium"
+  },
+  {
+    "id": "p3",
+    "name": "AI Chatbot Integration",
+    "description": "Integrate an AI chatbot for automated support using OpenAI API.",
+    "status": "Completed",
+    "progress": 100,
+    "deadline": "2025-08-01",
+    "team": ["Liam", "Sara", "Mohammed"],
+    "priority": "High"
+  },
+  {
+    "id": "p4",
+    "name": "Analytics Dashboard",
+    "description": "Building a team performance dashboard using Recharts and Next.js API routes.",
+    "status": "In Progress",
+    "progress": 45,
+    "deadline": "2025-11-30",
+    "team": ["Eden", "Noah"],
+    "priority": "Low"
+  },
+  {
+    "id": "p5",
+    "name": "Authentication System",
+    "description": "Implementing secure login/signup using JWT, bcrypt, and Prisma ORM.",
+    "status": "Completed",
+    "progress": 100,
+    "deadline": "2025-10-10",
+    "team": ["Yared", "Nadia"],
+    "priority": "High"
+  },
+  {
+    "id": "p6",
+    "name": "Cloud Deployment",
+    "description": "Deploy all microservices to AWS using CI/CD pipelines.",
+    "status": "In Progress",
+    "progress": 72,
+    "deadline": "2025-12-01",
+    "team": ["Abel", "Hana"],
+    "priority": "Medium"
+  }
+]
+
