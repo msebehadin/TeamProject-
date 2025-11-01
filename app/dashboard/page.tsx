@@ -5,8 +5,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import { RootState, AppDispatch } from '@/app/lib/store'
 import Chart from '@/components/Chart/chart'
 import { updateStats } from './store/dashboardSlice'
-
-const DashboardPage = () => {
+interface DashboardCardProps {
+  title: string
+  value: number
+}
+const DashboardPage:React.FC<DashboardCardProps> = ({title,value}) => {
   const dispatch = useDispatch<AppDispatch>()
   const stats = useSelector((state: RootState) => state.dashboard.stats)
 
