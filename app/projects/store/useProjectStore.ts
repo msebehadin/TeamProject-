@@ -4,7 +4,7 @@ interface ProjectStore{
     filter:string;
     setFilter:(filter:string)=>void;
 search:string;
-setSearch:(search:string)
+setSearch:(search:string)=>void
 }
 export const UseProjectStore=create<ProjectStore>((set)=>({
     filter:'All',

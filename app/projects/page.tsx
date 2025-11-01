@@ -13,7 +13,7 @@ import {
 import { Progress } from "@radix-ui/react-progress";
 
 const Page = () => {
-  const { data: projects = [], isLoading, error } = useProjects(6);
+  const { data: projects = [], isLoading, error } = useProjects();
   if (isLoading) return <p>Loading projects...</p>;
   if (error) return <p>failed to load projects</p>;
   return (
