@@ -9,7 +9,7 @@ interface ProjectData{
     status:string;
     progress:number;
     deadline:string;
-    team?:string[]
+    team:string[]
     priority:string
 }
     
@@ -22,7 +22,8 @@ return data
 }
 const fetchProject= async (id:string):Promise<ProjectData[]>=>{
     const response=await axios.get(`/api/projects/${id}`)
-    return response.data
+    const data:ProjectData[]=response.data
+    return data
 }
 export const useProjects=()=>{
 

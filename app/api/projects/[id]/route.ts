@@ -1,12 +1,24 @@
-import { NextResponse } from "next/server";
-import projects from '@/data/projects.json';
+import { NextResponse } from 'next/server';
 
-export async   function GET(_: Request, { params }: { params: { id: string } }) {
-  const project = projects.find(p => p.id === params.id);
+
+const projectData = [
+  { id: 'p1', name: 'Project 1' },
+  { id: 'p2', name: 'Project 2' },
+  
+];
+
+export async function GET(
+  _: Request, 
+  context: { params: Promise<{ id: string }> }
+) {
+  
+  const { id } = await context.params;
+  
+  const project = projectData.find((p) => p.id === id);
 
   if (!project) {
     return NextResponse.json(
-      { message: `No project found with ID "${params.id}".` },
+      { error: 'Project not found' },
       { status: 404 }
     );
   }
