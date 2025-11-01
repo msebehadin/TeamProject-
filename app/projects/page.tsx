@@ -1,12 +1,5 @@
 'use client'
 import { useProjects } from "./hooks/useProjectsquery";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@radix-ui/react-dropdown-menu";
-import { Button } from "@/components/ui/button";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
@@ -17,7 +10,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { MoreHorizontal } from "lucide-react";
 import { Progress } from "@radix-ui/react-progress";
 
 const Page = () => {
@@ -60,21 +52,7 @@ const Page = () => {
                   </TableCell>
                   <TableCell>{project.deadline}</TableCell>
                   <TableCell className="text-right">
-                    <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
-                        <Button variant="ghost" className="h-8 w-8 p-0">
-                          <span className="sr-only">open menu</span>
-                          <MoreHorizontal className="h-4 w-4" />
-                        </Button>
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent align="end">
-                        <DropdownMenuItem>view Details</DropdownMenuItem>
-                        <DropdownMenuItem>edit project</DropdownMenuItem>
-                        <DropdownMenuItem className="text-red-600">
-                          delete
-                        </DropdownMenuItem>
-                      </DropdownMenuContent>
-                    </DropdownMenu>
+                   {project.priority}
                   </TableCell>
                 </TableRow>
               ))}

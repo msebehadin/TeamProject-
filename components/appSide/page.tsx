@@ -31,7 +31,7 @@ const items = [
   },
   {
     title:'team',
-    url:'/app/team  ',
+    url:'/team  ',
     icon:Users
   }
   
